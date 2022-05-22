@@ -27,7 +27,7 @@
 
 #define	NUM_WORK_GROUPS		NUM_ELEMENTS/LOCAL_SIZE
 
-const char *			CL_FILE_NAME = { "first.cl" };
+const char *			CL_FILE_NAME = { "./first.cl" };
 
 void				Wait( cl_command_queue );
 int				LookAtTheBits( float );
