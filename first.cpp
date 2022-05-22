@@ -19,7 +19,7 @@
 #define	NMB			64
 #endif
 
-#define NUM_ELEMENTS		NMB*1024*1024
+#define NUM_ELEMENTS		NMB*1024
 
 #ifndef LOCAL_SIZE
 #define	LOCAL_SIZE		64
