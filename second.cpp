@@ -27,7 +27,7 @@
 
 #define	NUM_WORK_GROUPS		NUM_ELEMENTS/LOCAL_SIZE
 
-const char *			CL_FILE_NAME = { "./first_addMul.cl" };
+const char *			CL_FILE_NAME = { "./reduction.cl" };
 
 void				Wait( cl_command_queue );
 int				LookAtTheBits( float );
@@ -230,12 +230,10 @@ main( int argc, char *argv[ ] )
 	clReleaseMemObject(     dA  );
 	clReleaseMemObject(     dB  );
 	clReleaseMemObject(     dC  );
-	clReleaseMemObject(     dD  );
 
 	delete [ ] hA;
 	delete [ ] hB;
 	delete [ ] hC;
-	delete [ ] hD;
 
 	return 0;
 }
