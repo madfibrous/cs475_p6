@@ -84,8 +84,6 @@ main( int argc, char *argv[ ] )
 		hA[i] = hB[i] = (float) sqrt(  (double)i  );
 	}
 
-	size_t dataSize = NUM_ELEMENTS * sizeof(float);
-
 	// 3. create an opencl context:
 
 	cl_context context = clCreateContext( NULL, 1, &device, NULL, NULL, &status );
@@ -162,7 +160,7 @@ main( int argc, char *argv[ ] )
 
 	// 9. create the kernel object:
 
-	cl_kernel kernel = clCreateKernel( program, "ArrayMultReduce", &status );
+	cl_kernel kernel = clCreateKernel( program, "reduction", &status );
 	if( status != CL_SUCCESS )
 		fprintf( stderr, "clCreateKernel failed\n" );
 
